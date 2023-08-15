@@ -111,7 +111,10 @@
 
         const depositBtn = document.getElementById("depositBtn");
         depositBtn.addEventListener("click", function () {
-            const depositAmount = document.getElementById("depositAmount").value;
+            let depositAmount = document.getElementById("depositAmount").value;
+            if (depositAmount == "") {
+                depositAmount = 0;
+            }
             const convertDepositAmountToFloat = parseFloat(depositAmount);
 
             const currentDeposit = document.getElementById("currentDeposit").innerText;
@@ -130,6 +133,9 @@
         const withdrawBtn = document.getElementById("withdrawBtn");
         withdrawBtn.addEventListener("click", function () {
             let withdrawAmount = document.getElementById("withdrawAmount").value;
+            if (withdrawAmount == "") {
+                withdrawAmount = 0;
+            }
             const convertWithdrawAmountToFloat = parseFloat(withdrawAmount);
 
             const currentWithdraw = document.getElementById("currentWithdraw").innerText;
