@@ -17,33 +17,34 @@
             <section class="text-gray-600 body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
                     <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 text-center">
-                        <h1 class="title-font font-medium text-3xl text-gray-900">Welcome to Your Bank</h1>
+                        <h1 class="title-font font-medium text-5xl text-gray-900">Welcome to <span
+                                class="text-green-700">Your Bank</span></h1>
                         <p class="leading-relaxed mt-4">A banker is a fellow who lend his umbrella when the sun is
                             shining
                             and wants it back the minute it begins to rain.</p>
                     </div>
                     <div
                         class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-                        <h2 class="text-gray-900 text-lg font-medium title-font mb-5 bg-gray-100 text-center">Sign Up
+                        <h2 class="text-gray-900 text-lg font-medium title-font mb-5 text-center">Sign Up
                         </h2>
-                        <div class="relative mb-4 bg-gray-100">
-                            <label for="full-name" class="leading-7 text-sm text-gray-600 bg-gray-100">Full Name
+                        <div class="relative mb-4">
+                            <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name
                                 :</label>
                             <input type="text" id="full-name" name="full-name"
-                                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
-                        <div class="relative mb-4 bg-gray-100">
-                            <label for="email" class="leading-7 text-sm text-gray-600 bg-gray-100">Email :</label>
+                        <div class="relative mb-4">
+                            <label for="email" class="leading-7 text-sm text-gray-600">Email :</label>
                             <input type="email" id="email" name="email"
-                                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
-                        <div class="relative mb-4 bg-gray-100">
-                            <label for="email" class="leading-7 text-sm text-gray-600 bg-gray-100">password :</label>
-                            <input type="password" id="email" name="email"
-                                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        <div class="relative mb-4">
+                            <label for="email" class="leading-7 text-sm text-gray-600">password :</label>
+                            <input type="password" name="email"
+                                class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                         <button id="loginBtn"
-                            class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                            class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg font-bold">Button</button>
                         <!-- <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p> -->
                     </div>
                 </div>
@@ -52,15 +53,98 @@
     </div>
 
 
+    <div id="lendenArea" class="container flex justify-center items-center mt-[100px]">
+        <div class="w-full px-[20px]">
+            <div class="md:flex justify-around text-start">
+                <div class="w-full md:w-[25%] bg-green-500 p-[20px] rounded-xl my-3 md:my-0">
+                    <h3 class="text-[30px] text-white font-bold">Deposit</h3>
+                    <h1 class="text-[60px] text-white font-bold"><i class="fa-solid fa-dollar-sign"></i> <span
+                            id="currentDeposit">00</span></h1>
+                </div>
+                <div class="w-full md:w-[25%] bg-green-500 p-[20px] rounded-xl my-3 md:my-0">
+                    <h3 class="text-[25px] text-white font-bold">Withdraw</h3>
+                    <h1 class="text-[60px] text-white font-bold"><i class="fa-solid fa-dollar-sign"></i> <span
+                            id="currentWithdraw">00</span></h1>
+                </div>
+                <div class="w-full md:w-[25%] bg-green-500 p-[20px] rounded-xl my-3 md:my-0">
+                    <h3 class="text-[30px] text-white font-bold">Balance</h3>
+                    <h1 class="text-[60px] text-white font-bold"><i class="fa-solid fa-dollar-sign"></i> <span
+                            id="currentBalance">00</span></h1>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 container my-[40px]">
+                <div class="bg-gray-100 p-[30px] rounded-2xl shadow-xl">
+                    <h2 class="pb-3 text-[30px] font-bold text-gray-700">Deposit</h2>
+                    <input type="text" id="depositAmount"
+                        class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                        placeholder="$ amount you want to deposit">
+                    <button id="depositBtn"
+                        class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg font-bold mt-8">Deposit</button>
+                </div>
+
+                <div class="bg-gray-100 p-[30px] rounded-2xl shadow-xl">
+                    <h2 class="pb-3 text-[30px] font-bold text-gray-700">Withdraw</h2>
+                    <input type="text" id="withdrawAmount"
+                        class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                        placeholder="$ amount you want to Withdraw">
+                    <button id="withdrawBtn"
+                        class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg font-bold mt-8">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
     <script>
+
         const subBtn = document.getElementById("loginBtn");
         subBtn.addEventListener("click", function () {
             const loginArea = document.getElementById("login_area");
             loginArea.style.display = "none";
+            const lendenArea = document.getElementById("lendenArea");
+            lendenArea.style.display = "block";
         })
+
+        const depositBtn = document.getElementById("depositBtn");
+        depositBtn.addEventListener("click", function () {
+            const depositAmount = document.getElementById("depositAmount").value;
+            const convertDepositAmountToFloat = parseFloat(depositAmount);
+
+            const currentDeposit = document.getElementById("currentDeposit").innerText;
+            const convertCurrentDepositToFloat = parseFloat(currentDeposit);
+
+            const totalDeposit = convertDepositAmountToFloat + convertCurrentDepositToFloat;
+            document.getElementById("currentDeposit").innerText = totalDeposit;
+            document.getElementById("depositAmount").value = "";
+
+            const currentBalance = document.getElementById("currentBalance").innerText;
+            const convertCurrentBalanceToNumber = parseFloat(currentBalance);
+            const Balance = convertCurrentBalanceToNumber + convertDepositAmountToFloat;
+            document.getElementById("currentBalance").innerText = Balance;
+        })
+
+        const withdrawBtn = document.getElementById("withdrawBtn");
+        withdrawBtn.addEventListener("click", function () {
+            let withdrawAmount = document.getElementById("withdrawAmount").value;
+            const convertWithdrawAmountToFloat = parseFloat(withdrawAmount);
+
+            const currentWithdraw = document.getElementById("currentWithdraw").innerText;
+            const convertCurrentWithdrawToFloat = parseFloat(currentWithdraw);
+
+            const totalWithdraw = convertCurrentWithdrawToFloat + convertWithdrawAmountToFloat;
+            document.getElementById("currentWithdraw").innerText = totalWithdraw;
+            document.getElementById("withdrawAmount").value = "";
+
+            const currentBalance = document.getElementById("currentBalance").innerText;
+            const convertCurrentBalanceToNumber = parseFloat(currentBalance);
+            const Balance = convertCurrentBalanceToNumber - convertWithdrawAmountToFloat;
+            document.getElementById("currentBalance").innerText = Balance;
+        })
+
     </script>
 </body>
 
